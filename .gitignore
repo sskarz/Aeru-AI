@@ -64,3 +64,4 @@ fastlane/test_output
 claude.md
 .claude
 build
+Aeru/mlxtest/Resources/kokoro-v1_0.safetensors
