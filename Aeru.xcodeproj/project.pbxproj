@@ -11,6 +11,9 @@
 		684C44A42E3444080093FD7D /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 684C44A32E3444080093FD7D /* SQLite */; };
 		685AAA9E2E268842008B5063 /* SVDB in Frameworks */ = {isa = PBXBuildFile; productRef = 685AAA9D2E268842008B5063 /* SVDB */; };
 		68AE0FD32E2B1B5400D359D7 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 68AE0FD22E2B1B5400D359D7 /* SwiftSoup */; };
+		68C0D6662E5A476A00718459 /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = 68C0D6652E5A476A00718459 /* ComplexModule */; };
+		68C0D6682E5A476A00718459 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 68C0D6672E5A476A00718459 /* Numerics */; };
+		68C0D66A2E5A476A00718459 /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = 68C0D6692E5A476A00718459 /* RealModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +46,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C0D6662E5A476A00718459 /* ComplexModule in Frameworks */,
 				684C44A42E3444080093FD7D /* SQLite in Frameworks */,
+				68C0D66A2E5A476A00718459 /* RealModule in Frameworks */,
 				685AAA9E2E268842008B5063 /* SVDB in Frameworks */,
 				68AE0FD32E2B1B5400D359D7 /* SwiftSoup in Frameworks */,
+				68C0D6682E5A476A00718459 /* Numerics in Frameworks */,
 				684097A92E3DC29700EE87CF /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +99,9 @@
 				68AE0FD22E2B1B5400D359D7 /* SwiftSoup */,
 				684C44A32E3444080093FD7D /* SQLite */,
 				684097A82E3DC29700EE87CF /* MarkdownUI */,
+				68C0D6652E5A476A00718459 /* ComplexModule */,
+				68C0D6672E5A476A00718459 /* Numerics */,
+				68C0D6692E5A476A00718459 /* RealModule */,
 			);
 			productName = RAGSearchLLM;
 			productReference = 685AAA8B2E268669008B5063 /* Aeru.app */;
@@ -127,6 +136,7 @@
 				68AE0FD12E2B1B5400D359D7 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				684C44A22E3444080093FD7D /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 				684097A72E3DC29700EE87CF /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				68C0D6642E5A476A00718459 /* XCRemoteSwiftPackageReference "swift-numerics" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 685AAA8C2E268669008B5063 /* Products */;
@@ -412,6 +422,14 @@
 				minimumVersion = 2.9.5;
 			};
 		};
+		68C0D6642E5A476A00718459 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -434,6 +452,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68AE0FD12E2B1B5400D359D7 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		68C0D6652E5A476A00718459 /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68C0D6642E5A476A00718459 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		68C0D6672E5A476A00718459 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68C0D6642E5A476A00718459 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		68C0D6692E5A476A00718459 /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68C0D6642E5A476A00718459 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
