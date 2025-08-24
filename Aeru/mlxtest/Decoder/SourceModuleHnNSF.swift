@@ -6,7 +6,7 @@ import MLX
 import MLXNN
 import MLXRandom
 
-class SourceModuleHnNSF: Module {
+nonisolated class SourceModuleHnNSF: Module {
   private let sineAmp: Float
   private let noiseStd: Float
   private let lSinGen: SineGen

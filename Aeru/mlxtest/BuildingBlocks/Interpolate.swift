@@ -5,7 +5,7 @@ import Foundation
 import MLX
 import MLXNN
 
-func interpolate(
+nonisolated func interpolate(
   input: MLXArray,
   size: [Int]? = nil,
   scaleFactor: [Float]? = nil,
@@ -48,7 +48,7 @@ func interpolate(
   }
 }
 
-func interpolate1d(
+nonisolated func interpolate1d(
   input: MLXArray,
   size: Int,
   mode: String = "linear",

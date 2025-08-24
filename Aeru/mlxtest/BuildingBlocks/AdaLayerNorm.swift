@@ -5,7 +5,7 @@ import Foundation
 import MLX
 import MLXNN
 
-class AdaLayerNorm: Module {
+nonisolated class AdaLayerNorm: Module {
   let eps: Float
   let fc: Linear
 

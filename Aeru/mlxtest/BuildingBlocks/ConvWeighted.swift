@@ -5,7 +5,7 @@ import Foundation
 import MLX
 import MLXNN
 
-func computeNorm(
+nonisolated func computeNorm(
   x: MLXArray,
   p: Int,
   dim: [Int]? = nil,
@@ -31,7 +31,7 @@ func computeNorm(
   }
 }
 
-func weightNorm(
+nonisolated func weightNorm(
   weightV: MLXArray,
   weightG: MLXArray,
   dim: Int? = nil
@@ -62,7 +62,7 @@ func weightNorm(
 }
 
 /// Conv1d with weight normalization
-class ConvWeighted: Module {
+nonisolated class ConvWeighted: Module {
   var weightG: MLXArray
   var weightV: MLXArray
   var bias: MLXArray?

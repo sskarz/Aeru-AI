@@ -5,7 +5,7 @@ import Foundation
 import MLX
 import MLXNN
 
-class ReflectionPad1d: Module {
+nonisolated class ReflectionPad1d: Module {
   let padding: IntOrPair
 
   init(padding: (Int, Int)) {

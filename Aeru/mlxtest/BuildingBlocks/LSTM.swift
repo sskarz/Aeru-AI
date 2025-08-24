@@ -5,7 +5,7 @@ import Foundation
 import MLX
 import MLXNN
 
-class LSTM: Module {
+nonisolated class LSTM: Module {
   let inputSize: Int
   let hiddenSize: Int
   let hasBias: Bool

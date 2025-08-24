@@ -21,6 +21,19 @@
 		68C0D6752E5A494A00718459 /* MLXNN in Frameworks */ = {isa = PBXBuildFile; productRef = 68C0D6742E5A494A00718459 /* MLXNN */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		68C0D9B62E5AB02900718459 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		685AAA8B2E268669008B5063 /* Aeru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aeru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -35,11 +48,25 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		68C0D9B72E5AB02900718459 /* Exceptions for "Aeru" folder in "Embed Frameworks" phase from "Aeru" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				Frameworks/ESpeakNG.xcframework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 68C0D9B62E5AB02900718459 /* Embed Frameworks */;
+			membershipExceptions = (
+				Frameworks/ESpeakNG.xcframework,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		685AAA8D2E268669008B5063 /* Aeru */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				6855ED542E39F52A007BB8A2 /* Exceptions for "Aeru" folder in "Aeru" target */,
+				68C0D9B72E5AB02900718459 /* Exceptions for "Aeru" folder in "Embed Frameworks" phase from "Aeru" target */,
 			);
 			path = Aeru;
 			sourceTree = "<group>";
@@ -95,6 +122,7 @@
 				685AAA872E268669008B5063 /* Sources */,
 				685AAA882E268669008B5063 /* Frameworks */,
 				685AAA892E268669008B5063 /* Resources */,
+				68C0D9B62E5AB02900718459 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,7 +367,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -377,7 +405,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

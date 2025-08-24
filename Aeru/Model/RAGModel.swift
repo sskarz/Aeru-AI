@@ -42,10 +42,8 @@ class RAGModel {
         }
         
         // Move embedding generation to background thread
-        let embedding = await Task.detached(priority: .userInitiated) {
-            return self.generateEmbedding(for: entry)
-        }.value
-        
+        let embedding = self.generateEmbedding(for: entry)
+
         guard let embedding = embedding else {
             print("ERROR: Failed to generate embedding for entry: \(String(entry.prefix(100)))...")
             return
@@ -106,9 +104,8 @@ class RAGModel {
         }
         
         // Move query embedding generation to background thread
-        let queryEmbedding = await Task.detached(priority: .userInitiated) {
-            return self.generateEmbedding(for: query)
-        }.value
+        let queryEmbedding = self.generateEmbedding(for: query)
+        
         
         guard let queryEmbedding = queryEmbedding else {
             print("ERROR: Failed to generate query embedding")

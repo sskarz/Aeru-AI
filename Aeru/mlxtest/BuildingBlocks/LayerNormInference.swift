@@ -6,7 +6,7 @@ import MLX
 import MLXFast
 import MLXNN
 
-class LayerNormInference: Module {
+nonisolated class LayerNormInference: Module {
   public let eps: Float
   public let weight: MLXArray?
   public let bias: MLXArray?

@@ -1,6 +1,7 @@
 import AVFoundation
 import MLX
 import SwiftUI
+import Combine
 
 class MLXTestModel: ObservableObject {
   let kokoroTTSEngine: KokoroTTS!

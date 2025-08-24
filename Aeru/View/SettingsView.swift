@@ -28,6 +28,8 @@ enum AppColorScheme: String, CaseIterable {
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @AppStorage("colorScheme") private var selectedColorScheme = AppColorScheme.system.rawValue
+    @StateObject private var voiceTestModel = MLXTestModel()
+    @State private var voiceTestText: String = ""
     
     var body: some View {
         NavigationView {
@@ -136,6 +138,45 @@ struct SettingsView: View {
                             .padding(.horizontal, 16)
                             .padding(.vertical, 12)
                             .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(.horizontal, 20)
+                
+                // Voice Test Section
+                VStack(spacing: 16) {
+                    Text("Voice Test")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    VStack(spacing: 12) {
+                        TextField("Type something to say...", text: $voiceTestText)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 12)
+                            .background(Color(.systemGray6))
+                            .cornerRadius(8)
+                        
+                        Button(action: {
+                            if !voiceTestText.isEmpty {
+                                voiceTestModel.say(voiceTestText)
+                            } else {
+                                voiceTestModel.say("Please type something first")
+                            }
+                        }) {
+                            HStack {
+                                Image(systemName: "speaker.wave.2.fill")
+                                    .font(.body)
+                                
+                                Text("Test Voice")
+                                    .font(.body)
+                                    .fontWeight(.medium)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
                             .cornerRadius(8)
                         }
                         .buttonStyle(.plain)
